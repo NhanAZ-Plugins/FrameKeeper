@@ -1,13 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace KhoaGamingPro\FrameKeeper;
 
+use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
-use pocketmine\Server;
+use pocketmine\utils\TextFormat;
 
-class main extends PluginBase {
-	public function onEnable() {
-		Server::getInstance()->getPluginManager()->registerEvents(new events($this), $this);
-		Server::getInstance()->getLogger()->info("§b[§eFrameKeeper §dv1.1§b]§a Đã kích hoạt thành công!");
+final class Main extends PluginBase{
+	protected function onEnable() : void{
+		$this->getServer()->getPluginManager()->registerEvents(new FrameKeeperListener(), $this);
+		$this->getLogger()->info(TextFormat::AQUA . "[" . TextFormat::YELLOW . "FrameKeeper " . TextFormat::LIGHT_PURPLE . "v1.1" . TextFormat::AQUA . "]" . TextFormat::GREEN . " Đã kích hoạt thành công!");
 	}
 }

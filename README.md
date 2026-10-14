@@ -1,7 +1,15 @@
 # FrameKeeper
 
-FrameKeeper is a legacy PocketMine-MP plugin snapshot intended to prevent players from removing items from item frames. The [event handler](src/KhoaGamingPro/FrameKeeper/events.php) cancels `ItemFrameDropItemEvent`. The [manifest](plugin.yml) credits KhoaGamingPro and declares several historical 3.0.0 and 3.0.1 API values.
+FrameKeeper protects items displayed in normal and glowing item frames. Axolotl-PM API 5 no longer provides the historical `ItemFrameDropItemEvent`, so the plugin cancels the pre-attack `PlayerInteractEvent` when a player left-clicks an occupied item frame. This prevents the framed item from being removed; it also means the occupied frame itself cannot be broken until it is empty. Empty frames and right-click interactions are unaffected.
 
-The historical event API has not been checked against Axolotl-PM 5.x, so compatibility with that branch is not claimed. This repository has no current Axolotl-PM 5 build, static analysis pass, runtime test or stable release. The original Vietnamese description and startup message remain in the manifest and source.
+## Compatibility and validation
 
-No LICENSE file or documented grant for distributing a modified build was found. A port or release requires verified rights and an isolated test that item frame contents stay intact under the supported server API. See the [plugin bootstrap](src/KhoaGamingPro/FrameKeeper/main.php) for the existing registration logic.
+The manifest requires Axolotl-PM API 5.0.0. PHPStan max and reproducible PHAR builds are checked against pinned API 5.0.0 and 5.49.1 source revisions. These checks do not claim compatibility with every API 5 release.
+
+CI starts the generated PHAR on an isolated Axolotl-PM server and checks clean startup and shutdown. It does not simulate a connected player attacking or rotating an item frame.
+
+## Credits and distribution
+
+The manifest retains KhoaGamingPro as the author. There is no LICENSE file or verified grant for redistributing a modified build; no license was added and no stable release was published.
+
+For questions about the NhanAZ ecosystem, use [NhanAZ Discord](https://discord.gg/j2X83ujT6c).
