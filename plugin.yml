@@ -1,6 +1,6 @@
 name: FrameKeeper
 description: Ngăn người chơi lấy vật phẩm từ Item Frame
-author: KhoaGamingPro
+authors: ["NhanAZ", "KhoaGamingPro"]
 main: KhoaGamingPro\FrameKeeper\Main
 api: 5.0.0
 version: 1.1.0
