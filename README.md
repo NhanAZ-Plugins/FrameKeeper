@@ -1,6 +1,14 @@
 # FrameKeeper
 
-FrameKeeper protects items displayed in normal and glowing item frames. Axolotl-PM API 5 no longer provides the historical `ItemFrameDropItemEvent`, so the plugin cancels the pre-attack `PlayerInteractEvent` when a player left-clicks an occupied item frame. This prevents the framed item from being removed; it also means the occupied frame itself cannot be broken until it is empty. Empty frames and right-click interactions are unaffected.
+Item frame protection plugin for Axolotl-PM API 5.
+
+[![CI](https://github.com/NhanAZ-Plugins/FrameKeeper/actions/workflows/build.yml/badge.svg)](https://github.com/NhanAZ-Plugins/FrameKeeper/actions/workflows/build.yml)
+[![Latest release](https://img.shields.io/github/v/release/NhanAZ-Plugins/FrameKeeper)](https://github.com/NhanAZ-Plugins/FrameKeeper/releases/latest)
+[![Discord](https://img.shields.io/discord/986553214889517088?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/j2X83ujT6c)
+
+## Overview
+
+This plugin targets the PocketMine-MP and Axolotl-PM API 5 ecosystem and is maintained under [NhanAZ-Plugins](https://github.com/NhanAZ-Plugins).
 
 ## Compatibility and validation
 
@@ -11,5 +19,3 @@ CI starts the generated PHAR on an isolated Axolotl-PM server and checks clean s
 ## Credits and distribution
 
 The manifest retains KhoaGamingPro as the author. There is no LICENSE file or verified grant for redistributing a modified build; no license was added and no stable release was published.
-
-For questions about the NhanAZ ecosystem, use [NhanAZ Discord](https://discord.gg/j2X83ujT6c).
