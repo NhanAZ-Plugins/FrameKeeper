@@ -16,3 +16,8 @@ CI starts the generated PHAR on an isolated Axolotl-PM server and checks clean s
 ## Credits and distribution
 
 The manifest retains KhoaGamingPro as the author. There is no LICENSE file or verified grant for redistributing a modified build; no license was added and no stable release was published.
+
+
+## Credits
+
+Authors: NhanAZ, KhoaGamingPro.
