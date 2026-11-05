@@ -11,6 +11,6 @@ use pocketmine\utils\TextFormat;
 final class Main extends PluginBase{
 	protected function onEnable() : void{
 		$this->getServer()->getPluginManager()->registerEvents(new FrameKeeperListener(), $this);
-		$this->getLogger()->info(TextFormat::AQUA . "[" . TextFormat::YELLOW . "FrameKeeper " . TextFormat::LIGHT_PURPLE . "v1.1" . TextFormat::AQUA . "]" . TextFormat::GREEN . " Đã kích hoạt thành công!");
+		$this->getLogger()->info(TextFormat::GREEN . "FrameKeeper enabled.");
 	}
 }
